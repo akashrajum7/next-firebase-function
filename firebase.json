@@ -1,0 +1,28 @@
+{
+  "functions": {
+    "source": ".",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "runtime": "nodejs14"
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**/**",
+        "function": "nextjs-server"
+      }
+    ]
+  },
+  "emulators": {
+    "functions": {
+      "port": 4001
+    },
+    "hosting": {
+      "port": 4000
+    },
+    "ui": {
+      "enabled": true
+    }
+  }
+}
